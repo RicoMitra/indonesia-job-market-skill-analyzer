@@ -8,10 +8,12 @@ add_project_root()
 
 from src.database import query, role_skill_summary, role_summary  # noqa: E402
 from src.recommend import skill_gap  # noqa: E402
+from src.runtime import ensure_database  # noqa: E402
 
 
 ROOT = Path(__file__).resolve().parents[1]
 DATABASE = ROOT / "data" / "processed" / "job_market.db"
+SAMPLE = ROOT / "data" / "raw" / "sample_jobs.csv"
 ROLES = ["All roles", "Data Analyst", "Data Scientist", "ML Engineer", "AI Engineer", "Business Analyst", "Software Engineer"]
 
 st.set_page_config(page_title="SkillAtlas | Job market evidence", page_icon="◌", layout="wide")
@@ -38,9 +40,8 @@ def filtered_jobs(role: str, location: str):
     return query(DATABASE, f"select distinct j.* from jobs j left join job_roles jr on jr.job_id=j.job_id {where} order by j.posted_at desc", tuple(params))
 
 
-if not DATABASE.exists():
-    st.error("No processed database found. Run `python -m src.pipeline` from the repository root.")
-    st.stop()
+if ensure_database(SAMPLE, DATABASE):
+    st.cache_data.clear()
 
 with st.sidebar:
     st.title("SkillAtlas")
