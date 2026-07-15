@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.streamlit/secrets.toml
+data/processed/*.db
+data/processed/*.csv
+data/raw/full_*.csv

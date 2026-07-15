@@ -1,0 +1,13 @@
+title,company,location,posted_at,description,source_url
+Data Analyst,Nusantara Data,Jakarta,2026-01-12,"Analyze product data with SQL, Python, Excel, Power BI, and clear communication.",https://example.com/jobs/1
+Business Analyst,Garuda Systems,Jakarta,2026-01-15,"Partner with stakeholders, document requirements, build Excel and SQL reporting, and communicate findings.",https://example.com/jobs/2
+Data Scientist,Meridian Labs,Bandung,2026-01-18,"Build predictive models in Python using Pandas, scikit-learn, SQL, and statistics.",https://example.com/jobs/3
+ML Engineer,Orbit Compute,Jakarta,2026-01-20,"Deploy machine learning services with Python, Docker, Kubernetes, AWS, TensorFlow, and Git.",https://example.com/jobs/4
+AI Engineer,Signalworks,Remote,2026-01-21,"Create AI applications with Python, LLMs, FastAPI, Docker, AWS, and communication skills.",https://example.com/jobs/5
+Software Engineer,Pacific Stack,Surabaya,2026-01-25,"Develop backend services using Python, FastAPI, PostgreSQL, Docker, Git, and AWS.",https://example.com/jobs/6
+Data & Business Analyst,Atlas Commerce,Jakarta,2026-02-01,"Translate business questions into SQL, Power BI dashboards, Excel models, and stakeholder communication.",https://example.com/jobs/7
+Data Scientist,Insight Foundry,Yogyakarta,2026-02-03,"Experiment with Python, Pandas, PyTorch, SQL and cloud deployment on GCP.",https://example.com/jobs/8
+Machine Learning Engineer,Helio Health,Bandung,2026-02-07,"Operate ML pipelines with Python, scikit-learn, Docker, Kubernetes, Azure and Git.",https://example.com/jobs/9
+AI Engineer,Indigo Research,Jakarta,2026-02-10,"Prototype LLM products using Python, TensorFlow, Docker, GCP and FastAPI.",https://example.com/jobs/10
+Frontend Software Engineer,Terra Mobility,Jakarta,2026-02-12,"Build React and TypeScript applications, collaborate through Git, and integrate AWS services.",https://example.com/jobs/11
+Data Analyst,Coastline Finance,Remote,2026-02-14,"Create Tableau and Power BI reporting with SQL, Excel, Python and communication.",https://example.com/jobs/12
