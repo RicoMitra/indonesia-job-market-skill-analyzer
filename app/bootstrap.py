@@ -10,6 +10,7 @@ def project_root() -> Path:
 
 def add_project_root() -> Path:
     root = project_root()
-    if str(root) not in sys.path:
-        sys.path.insert(0, str(root))
+    pipeline_root = root / "pipeline"
+    if str(pipeline_root) not in sys.path:
+        sys.path.insert(0, str(pipeline_root))
     return root

@@ -31,8 +31,8 @@ def run(input_path: Path, output_dir: Path, source: str = "sample") -> dict[str,
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", type=Path, default=Path("data/raw/sample_jobs.csv"))
-    parser.add_argument("--output", type=Path, default=Path("data/processed"))
+    parser.add_argument("--input", type=Path, default=Path("pipeline/data/raw/sample_jobs.csv"))
+    parser.add_argument("--output", type=Path, default=Path("pipeline/data/processed"))
     parser.add_argument("--source", default="sample")
     args = parser.parse_args()
     print(run(args.input, args.output, args.source))

@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-07-15T14:44:37Z",
+  "exploratory": true,
+  "clusters": [
+    {
+      "id": 1,
+      "label": "Git / Python / AWS",
+      "posting_count": 4,
+      "defining_skills": [
+        "Git",
+        "Python",
+        "AWS"
+      ]
+    },
+    {
+      "id": 2,
+      "label": "SQL / Excel / Communication",
+      "posting_count": 4,
+      "defining_skills": [
+        "SQL",
+        "Excel",
+        "Communication"
+      ]
+    },
+    {
+      "id": 0,
+      "label": "Python / SQL / Pandas",
+      "posting_count": 2,
+      "defining_skills": [
+        "Python",
+        "SQL",
+        "Pandas"
+      ]
+    },
+    {
+      "id": 3,
+      "label": "Python / Docker / FastAPI",
+      "posting_count": 2,
+      "defining_skills": [
+        "Python",
+        "Docker",
+        "FastAPI"
+      ]
+    }
+  ]
+}

@@ -2,6 +2,9 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 .streamlit/secrets.toml
-data/processed/*.db
-data/processed/*.csv
-data/raw/full_*.csv
+pipeline/data/processed/*.db
+pipeline/data/processed/*.csv
+pipeline/data/raw/full_*.csv
+web/node_modules/
+web/.next/
+web/.vercel/

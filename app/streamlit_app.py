@@ -12,8 +12,8 @@ from src.runtime import ensure_database  # noqa: E402
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DATABASE = ROOT / "data" / "processed" / "job_market.db"
-SAMPLE = ROOT / "data" / "raw" / "sample_jobs.csv"
+DATABASE = ROOT / "pipeline" / "data" / "processed" / "job_market.db"
+SAMPLE = ROOT / "pipeline" / "data" / "raw" / "sample_jobs.csv"
 ROLES = ["All roles", "Data Analyst", "Data Scientist", "ML Engineer", "AI Engineer", "Business Analyst", "Software Engineer"]
 
 st.set_page_config(page_title="SkillAtlas | Job market evidence", layout="wide", initial_sidebar_state="expanded")

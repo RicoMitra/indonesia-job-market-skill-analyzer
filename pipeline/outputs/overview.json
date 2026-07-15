@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-07-15T14:44:37Z",
+  "source": {
+    "name": "Bundled illustrative public sample",
+    "type": "Original demo fixture",
+    "disclosure": "This is a reproducible educational snapshot, not live job-market intelligence."
+  },
+  "kpis": {
+    "matched_postings": 12,
+    "roles_covered": 6,
+    "top_observed_skill": "Python"
+  },
+  "top_skills": [
+    {
+      "skill": "Python",
+      "posting_count": 9
+    },
+    {
+      "skill": "SQL",
+      "posting_count": 7
+    },
+    {
+      "skill": "Docker",
+      "posting_count": 5
+    },
+    {
+      "skill": "AWS",
+      "posting_count": 4
+    },
+    {
+      "skill": "Communication",
+      "posting_count": 4
+    },
+    {
+      "skill": "Excel",
+      "posting_count": 4
+    },
+    {
+      "skill": "Git",
+      "posting_count": 4
+    },
+    {
+      "skill": "FastAPI",
+      "posting_count": 3
+    },
+    {
+      "skill": "Power BI",
+      "posting_count": 3
+    },
+    {
+      "skill": "GCP",
+      "posting_count": 2
+    },
+    {
+      "skill": "Kubernetes",
+      "posting_count": 2
+    },
+    {
+      "skill": "LLMs",
+      "posting_count": 2
+    }
+  ],
+  "role_comparison": [
+    {
+      "role": "Data Analyst",
+      "posting_count": 3
+    },
+    {
+      "role": "AI Engineer",
+      "posting_count": 2
+    },
+    {
+      "role": "Business Analyst",
+      "posting_count": 2
+    },
+    {
+      "role": "Data Scientist",
+      "posting_count": 2
+    },
+    {
+      "role": "ML Engineer",
+      "posting_count": 2
+    },
+    {
+      "role": "Software Engineer",
+      "posting_count": 2
+    }
+  ]
+}

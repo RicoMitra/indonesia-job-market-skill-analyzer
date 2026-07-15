@@ -1,0 +1,177 @@
+{
+  "generated_at": "2026-07-15T14:44:37Z",
+  "roles": {
+    "Data Analyst": [
+      {
+        "skill": "Communication",
+        "posting_count": 3
+      },
+      {
+        "skill": "Excel",
+        "posting_count": 3
+      },
+      {
+        "skill": "Power BI",
+        "posting_count": 3
+      },
+      {
+        "skill": "SQL",
+        "posting_count": 3
+      },
+      {
+        "skill": "Python",
+        "posting_count": 2
+      },
+      {
+        "skill": "Tableau",
+        "posting_count": 1
+      }
+    ],
+    "AI Engineer": [
+      {
+        "skill": "Docker",
+        "posting_count": 2
+      },
+      {
+        "skill": "FastAPI",
+        "posting_count": 2
+      },
+      {
+        "skill": "LLMs",
+        "posting_count": 2
+      },
+      {
+        "skill": "Python",
+        "posting_count": 2
+      },
+      {
+        "skill": "AWS",
+        "posting_count": 1
+      },
+      {
+        "skill": "Communication",
+        "posting_count": 1
+      },
+      {
+        "skill": "GCP",
+        "posting_count": 1
+      },
+      {
+        "skill": "TensorFlow",
+        "posting_count": 1
+      }
+    ],
+    "Business Analyst": [
+      {
+        "skill": "Excel",
+        "posting_count": 2
+      },
+      {
+        "skill": "SQL",
+        "posting_count": 2
+      },
+      {
+        "skill": "Communication",
+        "posting_count": 1
+      },
+      {
+        "skill": "Power BI",
+        "posting_count": 1
+      }
+    ],
+    "Data Scientist": [
+      {
+        "skill": "Pandas",
+        "posting_count": 2
+      },
+      {
+        "skill": "Python",
+        "posting_count": 2
+      },
+      {
+        "skill": "SQL",
+        "posting_count": 2
+      },
+      {
+        "skill": "GCP",
+        "posting_count": 1
+      },
+      {
+        "skill": "PyTorch",
+        "posting_count": 1
+      },
+      {
+        "skill": "scikit-learn",
+        "posting_count": 1
+      }
+    ],
+    "ML Engineer": [
+      {
+        "skill": "Docker",
+        "posting_count": 2
+      },
+      {
+        "skill": "Git",
+        "posting_count": 2
+      },
+      {
+        "skill": "Kubernetes",
+        "posting_count": 2
+      },
+      {
+        "skill": "Python",
+        "posting_count": 2
+      },
+      {
+        "skill": "AWS",
+        "posting_count": 1
+      },
+      {
+        "skill": "Azure",
+        "posting_count": 1
+      },
+      {
+        "skill": "TensorFlow",
+        "posting_count": 1
+      },
+      {
+        "skill": "scikit-learn",
+        "posting_count": 1
+      }
+    ],
+    "Software Engineer": [
+      {
+        "skill": "AWS",
+        "posting_count": 2
+      },
+      {
+        "skill": "Git",
+        "posting_count": 2
+      },
+      {
+        "skill": "Docker",
+        "posting_count": 1
+      },
+      {
+        "skill": "FastAPI",
+        "posting_count": 1
+      },
+      {
+        "skill": "Python",
+        "posting_count": 1
+      },
+      {
+        "skill": "React",
+        "posting_count": 1
+      },
+      {
+        "skill": "SQL",
+        "posting_count": 1
+      },
+      {
+        "skill": "TypeScript",
+        "posting_count": 1
+      }
+    ]
+  }
+}

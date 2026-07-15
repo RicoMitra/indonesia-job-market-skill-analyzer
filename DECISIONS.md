@@ -19,3 +19,13 @@ Accepted. Skills use a regex dictionary with aliases; role mapping is title base
 ## D-005: Exploratory clustering
 
 Accepted. KMeans with a fixed seed supports a portfolio demonstration. A weak silhouette score is disclosed instead of overinterpreted.
+
+## D-006: Python-owned static frontend contract
+
+Accepted. The existing Python pipeline remains the only implementation of cleaning, role mapping, skill extraction, SQLite aggregation, and clustering. It exports `overview.json`, `role_skills.json`, `clusters.json`, and `evidence_jobs.json` to `pipeline/outputs/` and mirrors them to `web/public/data/`.
+
+The web UI may render these artifacts and compare exact entered labels to precomputed role skills, but it may not rebuild analysis logic in TypeScript.
+
+## D-007: Next.js frontend deployed from `web/`
+
+Accepted. The portfolio-facing dashboard uses Next.js, Tailwind CSS, and Recharts in `web/` and is deployed to Vercel with that directory as its root. The Streamlit application remains a local reference only.

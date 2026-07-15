@@ -1,0 +1,101 @@
+{
+  "generated_at": "2026-07-15T14:44:37Z",
+  "jobs": [
+    {
+      "job_id": "a24c9f8c6b275258",
+      "title": "Data Analyst",
+      "company": "Coastline Finance",
+      "location": "Remote",
+      "posted_at": "2026-02-14",
+      "roles": "Data Analyst"
+    },
+    {
+      "job_id": "20fc431399d8e017",
+      "title": "Frontend Software Engineer",
+      "company": "Terra Mobility",
+      "location": "Jakarta",
+      "posted_at": "2026-02-12",
+      "roles": "Software Engineer"
+    },
+    {
+      "job_id": "604e5866cea4b7f8",
+      "title": "AI Engineer",
+      "company": "Indigo Research",
+      "location": "Jakarta",
+      "posted_at": "2026-02-10",
+      "roles": "AI Engineer"
+    },
+    {
+      "job_id": "5d607629855d4e93",
+      "title": "Machine Learning Engineer",
+      "company": "Helio Health",
+      "location": "Bandung",
+      "posted_at": "2026-02-07",
+      "roles": "ML Engineer"
+    },
+    {
+      "job_id": "1820b93385a0ad3a",
+      "title": "Data Scientist",
+      "company": "Insight Foundry",
+      "location": "Yogyakarta",
+      "posted_at": "2026-02-03",
+      "roles": "Data Scientist"
+    },
+    {
+      "job_id": "ddfb4579b19f1bf2",
+      "title": "Data & Business Analyst",
+      "company": "Atlas Commerce",
+      "location": "Jakarta",
+      "posted_at": "2026-02-01",
+      "roles": "Business Analyst | Data Analyst"
+    },
+    {
+      "job_id": "a633564edf1cbfdb",
+      "title": "Software Engineer",
+      "company": "Pacific Stack",
+      "location": "Surabaya",
+      "posted_at": "2026-01-25",
+      "roles": "Software Engineer"
+    },
+    {
+      "job_id": "7da2cdec34f1b80d",
+      "title": "AI Engineer",
+      "company": "Signalworks",
+      "location": "Remote",
+      "posted_at": "2026-01-21",
+      "roles": "AI Engineer"
+    },
+    {
+      "job_id": "f45ef5eda99a0928",
+      "title": "ML Engineer",
+      "company": "Orbit Compute",
+      "location": "Jakarta",
+      "posted_at": "2026-01-20",
+      "roles": "ML Engineer"
+    },
+    {
+      "job_id": "78bda6659282017f",
+      "title": "Data Scientist",
+      "company": "Meridian Labs",
+      "location": "Bandung",
+      "posted_at": "2026-01-18",
+      "roles": "Data Scientist"
+    },
+    {
+      "job_id": "e224f2e481ff66ea",
+      "title": "Business Analyst",
+      "company": "Garuda Systems",
+      "location": "Jakarta",
+      "posted_at": "2026-01-15",
+      "roles": "Business Analyst"
+    },
+    {
+      "job_id": "92e8a3f2e8b8ccfc",
+      "title": "Data Analyst",
+      "company": "Nusantara Data",
+      "location": "Jakarta",
+      "posted_at": "2026-01-12",
+      "roles": "Data Analyst"
+    }
+  ]
+}
