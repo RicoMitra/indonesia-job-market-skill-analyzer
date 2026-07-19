@@ -100,7 +100,7 @@ The active external snapshot is `pipeline/data/raw/external/jobstreet_indonesia_
 
 Deploy `web/` to Vercel with **Root Directory** set to `web`. Commit the generated JSON in `pipeline/outputs/` and `web/public/data/` so Vercel can build the static presentation layer without a Python runtime.
 
-Demo: [WorkSignal on Vercel](https://worksignal-indonesia-job-market-okp8xabox-dan1el.vercel.app)
+Demo: [WorkSignal on Vercel](https://worksignal-indonesia-job-market-oaixqxxeq-dan1el.vercel.app)
 
 ## Project records
 
