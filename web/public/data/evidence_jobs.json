@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T15:10:55Z",
+  "generated_at": "2026-07-19T07:45:24Z",
   "jobs": [
     {
       "job_id": "a24c9f8c6b275258",
@@ -7,7 +7,10 @@
       "company": "Coastline Finance",
       "location": "Remote",
       "posted_at": "2026-02-14",
-      "roles": "Data Analyst"
+      "source": "sample",
+      "scraped_at": "",
+      "roles": "Data Analyst",
+      "skills_detected": "Communication,Excel,Power BI,Python,SQL,Tableau"
     },
     {
       "job_id": "20fc431399d8e017",
@@ -15,7 +18,10 @@
       "company": "Terra Mobility",
       "location": "Jakarta",
       "posted_at": "2026-02-12",
-      "roles": "Software Engineer"
+      "source": "sample",
+      "scraped_at": "",
+      "roles": "Software Engineer",
+      "skills_detected": "AWS,Git,React,TypeScript"
     },
     {
       "job_id": "604e5866cea4b7f8",
@@ -23,7 +29,10 @@
       "company": "Indigo Research",
       "location": "Jakarta",
       "posted_at": "2026-02-10",
-      "roles": "AI Engineer"
+      "source": "sample",
+      "scraped_at": "",
+      "roles": "AI Engineer",
+      "skills_detected": "Docker,FastAPI,GCP,LLMs,Python,TensorFlow"
     },
     {
       "job_id": "5d607629855d4e93",
@@ -31,7 +40,10 @@
       "company": "Helio Health",
       "location": "Bandung",
       "posted_at": "2026-02-07",
-      "roles": "ML Engineer"
+      "source": "sample",
+      "scraped_at": "",
+      "roles": "ML Engineer",
+      "skills_detected": "Azure,Docker,Git,Kubernetes,Python,scikit-learn"
     },
     {
       "job_id": "1820b93385a0ad3a",
@@ -39,7 +51,10 @@
       "company": "Insight Foundry",
       "location": "Yogyakarta",
       "posted_at": "2026-02-03",
-      "roles": "Data Scientist"
+      "source": "sample",
+      "scraped_at": "",
+      "roles": "Data Scientist",
+      "skills_detected": "GCP,Pandas,PyTorch,Python,SQL"
     },
     {
       "job_id": "ddfb4579b19f1bf2",
@@ -47,7 +62,10 @@
       "company": "Atlas Commerce",
       "location": "Jakarta",
       "posted_at": "2026-02-01",
-      "roles": "Business Analyst | Data Analyst"
+      "source": "sample",
+      "scraped_at": "",
+      "roles": "Business Analyst,Data Analyst",
+      "skills_detected": "Communication,Excel,Power BI,SQL"
     },
     {
       "job_id": "a633564edf1cbfdb",
@@ -55,7 +73,10 @@
       "company": "Pacific Stack",
       "location": "Surabaya",
       "posted_at": "2026-01-25",
-      "roles": "Software Engineer"
+      "source": "sample",
+      "scraped_at": "",
+      "roles": "Software Engineer",
+      "skills_detected": "AWS,Docker,FastAPI,Git,Python,SQL"
     },
     {
       "job_id": "7da2cdec34f1b80d",
@@ -63,7 +84,10 @@
       "company": "Signalworks",
       "location": "Remote",
       "posted_at": "2026-01-21",
-      "roles": "AI Engineer"
+      "source": "sample",
+      "scraped_at": "",
+      "roles": "AI Engineer",
+      "skills_detected": "AWS,Communication,Docker,FastAPI,LLMs,Python"
     },
     {
       "job_id": "f45ef5eda99a0928",
@@ -71,7 +95,10 @@
       "company": "Orbit Compute",
       "location": "Jakarta",
       "posted_at": "2026-01-20",
-      "roles": "ML Engineer"
+      "source": "sample",
+      "scraped_at": "",
+      "roles": "ML Engineer",
+      "skills_detected": "AWS,Docker,Git,Kubernetes,Python,TensorFlow"
     },
     {
       "job_id": "78bda6659282017f",
@@ -79,7 +106,10 @@
       "company": "Meridian Labs",
       "location": "Bandung",
       "posted_at": "2026-01-18",
-      "roles": "Data Scientist"
+      "source": "sample",
+      "scraped_at": "",
+      "roles": "Data Scientist",
+      "skills_detected": "Pandas,Python,SQL,scikit-learn"
     },
     {
       "job_id": "e224f2e481ff66ea",
@@ -87,7 +117,10 @@
       "company": "Garuda Systems",
       "location": "Jakarta",
       "posted_at": "2026-01-15",
-      "roles": "Business Analyst"
+      "source": "sample",
+      "scraped_at": "",
+      "roles": "Business Analyst",
+      "skills_detected": "Excel,SQL"
     },
     {
       "job_id": "92e8a3f2e8b8ccfc",
@@ -95,7 +128,10 @@
       "company": "Nusantara Data",
       "location": "Jakarta",
       "posted_at": "2026-01-12",
-      "roles": "Data Analyst"
+      "source": "sample",
+      "scraped_at": "",
+      "roles": "Data Analyst",
+      "skills_detected": "Communication,Excel,Power BI,Python,SQL"
     }
   ]
 }

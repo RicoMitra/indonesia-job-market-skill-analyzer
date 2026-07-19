@@ -37,11 +37,13 @@ def export_static(input_path: Path, processed_dir: Path, output_dir: Path, publi
     evidence = query(
         database,
         """
-        select j.job_id, j.title, j.company, j.location, j.posted_at,
-               group_concat(jr.role, ' | ') as roles
+        select j.job_id, j.title, j.company, j.location, j.posted_at, j.source, j.scraped_at,
+               group_concat(distinct jr.role) as roles,
+               group_concat(distinct js.skill) as skills_detected
         from jobs j
         left join job_roles jr on jr.job_id = j.job_id
-        group by j.job_id, j.title, j.company, j.location, j.posted_at
+        left join job_skills js on js.job_id = j.job_id
+        group by j.job_id, j.title, j.company, j.location, j.posted_at, j.source, j.scraped_at
         order by j.posted_at desc, j.title asc
         """,
     )
@@ -64,6 +66,18 @@ def export_static(input_path: Path, processed_dir: Path, output_dir: Path, publi
         from job_clusters
         group by cluster, cluster_label
         order by posting_count desc, cluster asc
+        """,
+    )
+    locations = query(
+        database,
+        "select location, count(*) as posting_count from jobs where trim(location) <> '' group by location order by posting_count desc, location limit 5",
+    )
+    skill_pairs = query(
+        database,
+        """
+        select a.skill as skill_a, b.skill as skill_b, count(distinct a.job_id) as posting_count
+        from job_skills a join job_skills b on a.job_id = b.job_id and a.skill < b.skill
+        group by a.skill, b.skill order by posting_count desc, skill_a, skill_b limit 5
         """,
     )
     clusters = [
@@ -89,6 +103,11 @@ def export_static(input_path: Path, processed_dir: Path, output_dir: Path, publi
         },
         "top_skills": records(all_skills),
         "role_comparison": records(roles),
+        "insights": {
+            "dominant_locations": records(locations),
+            "skill_combinations": records(skill_pairs),
+            "warning": "Observed posting frequency is descriptive evidence, not a real-time market estimate or career recommendation.",
+        },
     }
     write_json(output_dir, "overview.json", overview)
     write_json(output_dir, "metadata.json", metadata)

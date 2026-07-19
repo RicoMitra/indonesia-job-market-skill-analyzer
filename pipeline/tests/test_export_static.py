@@ -26,3 +26,5 @@ def test_export_static_writes_frontend_contract_files(tmp_path):
     assert overview["kpis"]["matched_postings"] == 12
     assert "Data Analyst" in role_skills["roles"]
     assert metadata["row_count"] == 12
+    assert overview["insights"]["dominant_locations"]
+    assert overview["insights"]["skill_combinations"]

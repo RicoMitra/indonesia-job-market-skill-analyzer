@@ -1,8 +1,8 @@
-# WorkSignal — Job-market intelligence workspace
+# WorkSignal — Job Posting Skill Analyzer
 
-A reproducible data product that examines skills explicitly observed in Indonesian job-description samples across Data Analyst, Data Scientist, ML Engineer, AI Engineer, Business Analyst, and Software Engineer roles.
+A reproducible, snapshot-based analysis of skills explicitly observed in Indonesian job postings across Data Analyst, Data Scientist, ML Engineer, AI Engineer, Business Analyst, and Software Engineer roles.
 
-The Python pipeline is the source of truth. It cleans CSV data, maps roles, extracts skills from a transparent regex dictionary, stores results in SQLite, runs exploratory clustering, and exports static JSON summaries. The Next.js dashboard only renders those summaries; it does not recreate analysis in JavaScript.
+The Python pipeline is the source of truth. It cleans CSV data, marks duplicates, maps roles, extracts skills from a transparent regex dictionary, stores results in SQLite, runs exploratory clustering, and exports static JSON summaries. The Next.js interface only renders those summaries; it does not recreate analysis in JavaScript.
 
 > This is an educational sample, not live job-market intelligence, career advice, hiring prediction, or a job-board scraper.
 
@@ -16,13 +16,18 @@ python pipeline/export_static.py --input pipeline/data/raw/sample_jobs.csv --pub
 
 The command regenerates `metadata.json`, `overview.json`, `roles.json`, `role_skills.json`, `skill_matrix.json`, `clusters.json`, and `evidence_jobs.json`. The repository bundles only its original demo fixture. Any external dataset must have its license, fields, and redistribution terms verified before it is committed; otherwise use this local refresh path.
 
-## Product views
+## What the snapshot can show
 
-- **Overview:** KPI, source disclosure, top observed skills, role comparison, and sample evidence rows.
-- **Roles:** role selector, skill-frequency chart, and corresponding evidence postings.
-- **Clusters:** exploratory cluster cards with defining observed skills.
-- **Skill Gap:** exact input-to-precomputed-skill comparison with coverage, matches, and missing skills.
-- **Methods:** dataset, pipeline, mapping, dictionary, and limitation disclosure.
+- Most frequently observed explicit skills and role categories.
+- Dominant locations and recurring skill combinations.
+- Exact-label skill-gap comparison for Data Analyst, Data Scientist, and ML Engineer.
+- Evidence rows that retain source and snapshot metadata.
+
+It does **not** measure the full Indonesian market, provide real-time vacancies, predict hiring outcomes, or recommend a career action.
+
+## Data contract and manual refresh
+
+Use a local CSV with `title` and `description`, plus `company`, `location`, `posted_at`, `source`, `source_url`, and `scraped_at` whenever available. The pipeline emits `role_category`, `skills_detected`, and `is_duplicate`, retains one canonical record per stable posting fingerprint, and mirrors static artifacts for Vercel.
 
 ## Architecture
 
@@ -82,7 +87,7 @@ pnpm build
 
 `pipeline/data/raw/sample_jobs.csv` is an original, illustrative fixture included so the repository works without credentials or scraping. It is not a live labor-market dataset.
 
-The candidate larger Indonesian source is the [Jobstreet Indonesia Dataset on Kaggle](https://www.kaggle.com/datasets/azizainunnajib/jobs-crawling), whose public listing previously reported CC0. Its license, schema, retrieval date, and source terms must be checked again before it is used. The pipeline needs `title` and `description`; optional canonical fields are `company`, `location`, `posted_at`, and `source_url`.
+The candidate larger Indonesian source is the [Jobstreet Indonesia Dataset on Kaggle](https://www.kaggle.com/datasets/azizainunnajib/jobs-crawling), whose public listing reports CC0. The listing exposes many dated files but does not document a usable schema sufficiently for this repository to bundle it safely. Download it yourself only after verifying the dataset card, file schema, and applicable source terms; then use the local refresh command. The pipeline needs `title` and `description`; `company`, `location`, `posted_at`, `source`, `source_url`, and `scraped_at` are strongly recommended.
 
 - Role mapping is transparent and title-based; explicitly ambiguous titles can map to more than one role.
 - Skill aliases live in `pipeline/src/extract_skills.py`; for example PostgreSQL maps to SQL.
@@ -92,6 +97,8 @@ The candidate larger Indonesian source is the [Jobstreet Indonesia Dataset on Ka
 ## Deployment
 
 Deploy `web/` to Vercel with **Root Directory** set to `web`. Commit the generated JSON in `pipeline/outputs/` and `web/public/data/` so Vercel can build the static presentation layer without a Python runtime.
+
+Demo: [WorkSignal on Vercel](https://worksignal-indonesia-job-market-jtwzxf4pe-dan1el.vercel.app)
 
 ## Project records
 

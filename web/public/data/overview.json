@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T15:10:55Z",
+  "generated_at": "2026-07-19T07:45:24Z",
   "source": {
     "name": "Bundled illustrative public sample",
     "type": "Original demo fixture",
@@ -85,5 +85,57 @@
       "role": "Software Engineer",
       "posting_count": 2
     }
-  ]
+  ],
+  "insights": {
+    "dominant_locations": [
+      {
+        "location": "Jakarta",
+        "posting_count": 6
+      },
+      {
+        "location": "Bandung",
+        "posting_count": 2
+      },
+      {
+        "location": "Remote",
+        "posting_count": 2
+      },
+      {
+        "location": "Surabaya",
+        "posting_count": 1
+      },
+      {
+        "location": "Yogyakarta",
+        "posting_count": 1
+      }
+    ],
+    "skill_combinations": [
+      {
+        "skill_a": "Docker",
+        "skill_b": "Python",
+        "posting_count": 5
+      },
+      {
+        "skill_a": "Python",
+        "skill_b": "SQL",
+        "posting_count": 5
+      },
+      {
+        "skill_a": "Excel",
+        "skill_b": "SQL",
+        "posting_count": 4
+      },
+      {
+        "skill_a": "AWS",
+        "skill_b": "Docker",
+        "posting_count": 3
+      },
+      {
+        "skill_a": "AWS",
+        "skill_b": "Git",
+        "posting_count": 3
+      }
+    ],
+    "warning": "Observed posting frequency is descriptive evidence, not a real-time market estimate or career recommendation."
+  }
 }

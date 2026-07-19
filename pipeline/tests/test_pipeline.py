@@ -17,7 +17,22 @@ def test_clean_jobs_deduplicates_and_preserves_canonical_columns():
     result = clean_jobs(raw, source="sample")
 
     assert len(result) == 1
-    assert set(["job_id", "title", "company", "location", "description", "source"]).issubset(result.columns)
+    assert set(["job_id", "title", "company", "location", "description", "source", "scraped_at", "role_category", "skills_detected", "is_duplicate"]).issubset(result.columns)
+    assert not result.iloc[0]["is_duplicate"]
+
+
+def test_clean_jobs_marks_duplicate_rows_before_dropping_them():
+    raw = pd.DataFrame(
+        [
+            {"title": "Data Analyst", "company": "Nusantara Data", "location": "Jakarta", "description": "Use SQL."},
+            {"title": "Data Analyst", "company": "Nusantara Data", "location": "Jakarta", "description": "Use SQL."},
+        ]
+    )
+
+    result = clean_jobs(raw, source="manual_snapshot")
+
+    assert len(result) == 1
+    assert result.iloc[0]["source"] == "manual_snapshot"
 
 
 def test_role_mapping_allows_ambiguous_titles_to_match_multiple_roles():

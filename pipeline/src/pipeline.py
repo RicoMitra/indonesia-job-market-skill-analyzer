@@ -21,6 +21,8 @@ def run(input_path: Path, output_dir: Path, source: str = "sample") -> dict[str,
     role_map = {job_id: roles for job_id, roles in role_map.items() if roles}
     jobs = jobs[jobs.job_id.isin(role_map)].copy()
     skill_map = {row.job_id: extract_skills(row.description) for row in jobs.itertuples()}
+    jobs["role_category"] = jobs["job_id"].map(lambda job_id: " | ".join(role_map[job_id]))
+    jobs["skills_detected"] = jobs["job_id"].map(lambda job_id: " | ".join(skill_map[job_id]))
     build_database(jobs, role_map, skill_map, output_dir / "job_market.db")
     clusters, quality = cluster_jobs(skill_map)
     if not clusters.empty:
