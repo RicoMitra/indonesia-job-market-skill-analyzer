@@ -1,45 +1,45 @@
 {
-  "generated_at": "2026-07-19T08:07:03Z",
+  "generated_at": "2026-07-19T08:14:56Z",
   "exploratory": true,
   "clusters": [
     {
-      "id": 1,
-      "label": "Git / Python / AWS",
-      "posting_count": 4,
-      "defining_skills": [
-        "Git",
-        "Python",
-        "AWS"
-      ]
-    },
-    {
-      "id": 2,
-      "label": "SQL / Excel / Communication",
-      "posting_count": 4,
-      "defining_skills": [
-        "SQL",
-        "Excel",
-        "Communication"
-      ]
-    },
-    {
       "id": 0,
-      "label": "Python / SQL / Pandas",
-      "posting_count": 2,
+      "label": "Java / Communication / Excel",
+      "posting_count": 78,
       "defining_skills": [
-        "Python",
+        "Java",
+        "Communication",
+        "Excel"
+      ]
+    },
+    {
+      "id": 1,
+      "label": "SQL / JavaScript / Java",
+      "posting_count": 55,
+      "defining_skills": [
         "SQL",
-        "Pandas"
+        "JavaScript",
+        "Java"
       ]
     },
     {
       "id": 3,
-      "label": "Python / Docker / FastAPI",
-      "posting_count": 2,
+      "label": "JavaScript / React / TypeScript",
+      "posting_count": 55,
       "defining_skills": [
-        "Python",
-        "Docker",
-        "FastAPI"
+        "JavaScript",
+        "React",
+        "TypeScript"
+      ]
+    },
+    {
+      "id": 2,
+      "label": "React / TypeScript / Java",
+      "posting_count": 35,
+      "defining_skills": [
+        "React",
+        "TypeScript",
+        "Java"
       ]
     }
   ]

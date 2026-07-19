@@ -4,9 +4,9 @@
 
 `raw/sample_jobs.csv` is an original illustrative sample written for this repository. Its schema is verified by `src.clean_data.clean_jobs` and includes the required `title` and `description` columns plus optional company, location, date, and URL fields. It is public within this repository and requires no account, key, or invitation.
 
-## Candidate external source
+## Active external source
 
-Kaggle's [Jobstreet Indonesia Dataset](https://www.kaggle.com/datasets/azizainunnajib/jobs-crawling) is a potential larger source. Its public listing reported a CC0 license and dated CSV files when this project was designed. It is not ingested or redistributed here. Before any use, re-check the listing's license, inspect the downloaded headers for `title` and a full description-equivalent field, document the retrieval date, and confirm source terms.
+`raw/external/jobstreet_indonesia_target_roles_5000.csv` is a deterministic 5,000-row target-role subset built on 2026-07-19 from the public [Jobstreet Indonesia Dataset](https://www.kaggle.com/datasets/azizainunnajib/jobs-crawling) mirror linked by BINUS BeeFest. Kaggle's public listing reports CC0. The source schema was verified as `jobTitle`, `companyName`, `locations`, `description`, `postedAt`, and `jobUrl` before normalization. The stored snapshot uses the standard eight-column schema and removes query-string parameters from public job URLs. The larger 623,610-row download remains local-only; generated dashboard evidence reflects the deduplicated target-role snapshot.
 
 ## Adding a manual external snapshot
 

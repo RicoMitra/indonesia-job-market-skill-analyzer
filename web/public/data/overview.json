@@ -1,139 +1,139 @@
 {
-  "generated_at": "2026-07-19T08:07:03Z",
+  "generated_at": "2026-07-19T08:14:56Z",
   "source": {
-    "name": "sample_jobs",
-    "type": "Original demo fixture",
+    "name": "Jobstreet Indonesia Dataset (public snapshot)",
+    "type": "External local snapshot",
     "disclosure": "This is a reproducible snapshot dataset, not a real-time job-market feed."
   },
   "kpis": {
-    "matched_postings": 12,
+    "matched_postings": 1991,
     "roles_covered": 6,
-    "top_observed_skill": "Python"
+    "top_observed_skill": "JavaScript"
   },
   "top_skills": [
     {
-      "skill": "Python",
-      "posting_count": 9
+      "skill": "JavaScript",
+      "posting_count": 62
     },
     {
       "skill": "SQL",
+      "posting_count": 57
+    },
+    {
+      "skill": "React",
+      "posting_count": 51
+    },
+    {
+      "skill": "Java",
+      "posting_count": 37
+    },
+    {
+      "skill": "Communication",
+      "posting_count": 22
+    },
+    {
+      "skill": "Excel",
+      "posting_count": 14
+    },
+    {
+      "skill": "TypeScript",
+      "posting_count": 14
+    },
+    {
+      "skill": "Git",
+      "posting_count": 7
+    },
+    {
+      "skill": "Python",
       "posting_count": 7
     },
     {
       "skill": "Docker",
-      "posting_count": 5
+      "posting_count": 3
+    },
+    {
+      "skill": "Tableau",
+      "posting_count": 3
     },
     {
       "skill": "AWS",
-      "posting_count": 4
-    },
-    {
-      "skill": "Communication",
-      "posting_count": 4
-    },
-    {
-      "skill": "Excel",
-      "posting_count": 4
-    },
-    {
-      "skill": "Git",
-      "posting_count": 4
-    },
-    {
-      "skill": "FastAPI",
-      "posting_count": 3
-    },
-    {
-      "skill": "Power BI",
-      "posting_count": 3
-    },
-    {
-      "skill": "GCP",
-      "posting_count": 2
-    },
-    {
-      "skill": "Kubernetes",
-      "posting_count": 2
-    },
-    {
-      "skill": "LLMs",
       "posting_count": 2
     }
   ],
   "role_comparison": [
     {
-      "role": "Data Analyst",
-      "posting_count": 3
-    },
-    {
-      "role": "AI Engineer",
-      "posting_count": 2
+      "role": "Software Engineer",
+      "posting_count": 1286
     },
     {
       "role": "Business Analyst",
-      "posting_count": 2
+      "posting_count": 328
+    },
+    {
+      "role": "Data Analyst",
+      "posting_count": 283
     },
     {
       "role": "Data Scientist",
-      "posting_count": 2
+      "posting_count": 86
     },
     {
       "role": "ML Engineer",
-      "posting_count": 2
+      "posting_count": 8
     },
     {
-      "role": "Software Engineer",
-      "posting_count": 2
+      "role": "AI Engineer",
+      "posting_count": 3
     }
   ],
   "insights": {
     "dominant_locations": [
       {
-        "location": "Jakarta",
-        "posting_count": 6
+        "location": "Jakarta Raya",
+        "posting_count": 708
       },
       {
-        "location": "Bandung",
-        "posting_count": 2
+        "location": "Jakarta Selatan",
+        "posting_count": 282
       },
       {
-        "location": "Remote",
-        "posting_count": 2
+        "location": "Jakarta Barat",
+        "posting_count": 129
       },
       {
-        "location": "Surabaya",
-        "posting_count": 1
+        "location": "Tangerang",
+        "posting_count": 115
       },
       {
-        "location": "Yogyakarta",
-        "posting_count": 1
+        "location": "Jakarta Pusat",
+        "posting_count": 113
       }
     ],
     "skill_combinations": [
       {
-        "skill_a": "Docker",
-        "skill_b": "Python",
-        "posting_count": 5
+        "skill_a": "JavaScript",
+        "skill_b": "React",
+        "posting_count": 13
       },
       {
-        "skill_a": "Python",
+        "skill_a": "JavaScript",
+        "skill_b": "SQL",
+        "posting_count": 9
+      },
+      {
+        "skill_a": "Java",
+        "skill_b": "JavaScript",
+        "posting_count": 6
+      },
+      {
+        "skill_a": "JavaScript",
+        "skill_b": "TypeScript",
+        "posting_count": 6
+      },
+      {
+        "skill_a": "React",
         "skill_b": "SQL",
         "posting_count": 5
-      },
-      {
-        "skill_a": "Excel",
-        "skill_b": "SQL",
-        "posting_count": 4
-      },
-      {
-        "skill_a": "AWS",
-        "skill_b": "Docker",
-        "posting_count": 3
-      },
-      {
-        "skill_a": "AWS",
-        "skill_b": "Git",
-        "posting_count": 3
       }
     ],
     "warning": "Observed posting frequency is descriptive evidence, not a real-time market estimate or career recommendation."

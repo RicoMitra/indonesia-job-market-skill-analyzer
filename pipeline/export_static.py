@@ -42,6 +42,13 @@ def export_static(
     is_external_snapshot = pipeline_result["source_datasets"] != [input_path.stem]
     roles = role_summary(database)
     all_skills = role_skill_summary(database).head(12)
+    retrieval_date = query(
+        database, "select max(nullif(trim(scraped_at), '')) as value from jobs"
+    ).iloc[0]["value"]
+    source_names = query(
+        database, "select distinct source from jobs where trim(source) <> '' order by source"
+    )["source"].tolist()
+    source_name = " + ".join(source_names) if source_names else "unknown"
     evidence = query(
         database,
         """
@@ -61,14 +68,15 @@ def export_static(
     }
     metadata = {
         "generated_at": generated_at,
-        "source": " + ".join(pipeline_result["source_datasets"]),
+        "source": source_name,
+        "source_name": source_name,
         "source_datasets": pipeline_result["source_datasets"],
         "license": "Verify the license and source terms for each manually supplied external snapshot."
         if is_external_snapshot
         else "Original demo fixture; replace through the documented local CSV refresh workflow.",
         "row_count": int(query(database, "select count(*) as count from jobs").iloc[0]["count"]),
         "refresh_date": generated_at,
-        "retrieval_date": None,
+        "retrieval_date": retrieval_date,
         "status": "snapshot dataset, not real-time",
         "limitations": "Static educational sample. No live scraping, paid API, or career advice.",
     }
@@ -105,7 +113,7 @@ def export_static(
     overview = {
         "generated_at": generated_at,
         "source": {
-            "name": " + ".join(pipeline_result["source_datasets"]),
+            "name": source_name,
             "type": "External local snapshot" if is_external_snapshot else "Original demo fixture",
             "disclosure": "This is a reproducible snapshot dataset, not a real-time job-market feed.",
         },

@@ -14,6 +14,7 @@ def test_export_static_writes_frontend_contract_files(tmp_path):
         processed_dir=tmp_path / "processed",
         output_dir=output_dir,
         public_dir=public_dir,
+        external_dir=tmp_path / "empty-external",
     )
 
     expected = {"metadata.json", "overview.json", "roles.json", "role_skills.json", "skill_matrix.json", "clusters.json", "evidence_jobs.json"}

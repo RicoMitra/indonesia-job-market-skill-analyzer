@@ -20,12 +20,12 @@ CANONICAL_INPUT_COLUMNS = (
 
 COLUMN_ALIASES = {
     "title": ("title", "job_title", "jobtitle", "position", "role"),
-    "company": ("company", "company_name", "employer", "organization"),
-    "location": ("location", "job_location", "city", "job_city"),
+    "company": ("company", "company_name", "companyname", "employer", "organization"),
+    "location": ("location", "locations", "job_location", "joblocation", "city", "job_city"),
     "description": ("description", "job_description", "job_desc", "jd", "details"),
-    "posted_at": ("posted_at", "posting_date", "posted_date", "date_posted", "date"),
+    "posted_at": ("posted_at", "postedat", "posting_date", "posted_date", "date_posted", "date"),
     "source": ("source", "portal", "job_board", "platform"),
-    "source_url": ("source_url", "job_url", "url", "link", "posting_url"),
+    "source_url": ("source_url", "job_url", "joburl", "url", "link", "posting_url"),
     "scraped_at": ("scraped_at", "retrieved_at", "collected_at", "snapshot_at"),
 }
 

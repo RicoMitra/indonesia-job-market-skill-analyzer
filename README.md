@@ -16,7 +16,7 @@ python pipeline/export_static.py --external pipeline/data/raw/external --public 
 
 The pipeline automatically uses the external CSV files as its primary snapshot when that folder is non-empty. If it is empty, it falls back to the bundled 12-row demo fixture. It accepts common aliases such as `job_title`, `company_name`, `job_location`, `job_description`, `posting_date`, and `job_url`, then normalizes them to `title`, `company`, `location`, `description`, `posted_at`, `source`, `source_url`, and `scraped_at`. Missing fields become empty values (`source` becomes `unknown`) rather than stopping the run. Duplicate postings are removed using `title + company + location + description`.
 
-Download a CSV manually from a source whose license, schema, and source terms you have verified. Do not automate scraping of LinkedIn, Jobstreet, Glints, or Kalibrr. The command regenerates the JSON artifacts and `metadata.json` records source filenames, actual post-deduplication row count, refresh timestamp, and `snapshot dataset, not real-time` status. The committed demo remains intentionally small until a verified external snapshot is supplied.
+Download a CSV manually from a source whose license, schema, and source terms you have verified. Do not automate scraping of LinkedIn, Jobstreet, Glints, or Kalibrr. The command regenerates the JSON artifacts and `metadata.json` records source filenames, actual post-deduplication row count, refresh timestamp, and `snapshot dataset, not real-time` status.
 
 ## What the snapshot can show
 
@@ -89,7 +89,7 @@ pnpm build
 
 `pipeline/data/raw/sample_jobs.csv` is an original, illustrative fixture included so the repository works without credentials or scraping. It is not a live labor-market dataset.
 
-The candidate larger Indonesian source is the [Jobstreet Indonesia Dataset on Kaggle](https://www.kaggle.com/datasets/azizainunnajib/jobs-crawling), whose public listing reports CC0. The listing exposes many dated files but does not document a usable schema sufficiently for this repository to bundle it safely. Download it yourself only after verifying the dataset card, file schema, and applicable source terms; then use the local refresh command. The pipeline needs `title` and `description`; `company`, `location`, `posted_at`, `source`, `source_url`, and `scraped_at` are strongly recommended.
+The active external snapshot is `pipeline/data/raw/external/jobstreet_indonesia_target_roles_5000.csv`: a deterministic 5,000-row target-role subset of the [Jobstreet Indonesia Dataset on Kaggle](https://www.kaggle.com/datasets/azizainunnajib/jobs-crawling), whose public listing reports CC0. It was retrieved from a public BINUS BeeFest dataset mirror on 2026-07-19, normalized to the documented eight-column schema, and then deduplicated by the pipeline. Its dashboard artifact contains 1,991 matched postings after deduplication. This is a historical snapshot, not a claim about the full Indonesian market or current vacancies.
 
 - Role mapping is transparent and title-based; explicitly ambiguous titles can map to more than one role.
 - Skill aliases live in `pipeline/src/extract_skills.py`; for example PostgreSQL maps to SQL.

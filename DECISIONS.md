@@ -33,3 +33,7 @@ Accepted. The portfolio-facing dashboard uses Next.js, Tailwind CSS, and Rechart
 ## D-008: Manual external snapshot ingestion
 
 Accepted. CSV files placed in `pipeline/data/raw/external/` are the primary analytical input when present; the original sample is a deterministic fallback only. The pipeline supports documented column aliases, fills missing optional values, and removes exact posting fingerprints before analysis. Each refresh exposes source filenames, deduplicated row count, refresh date, and a non-real-time snapshot status. This preserves offline, no-credential reproducibility and avoids automated portal scraping.
+
+## D-009: Public Jobstreet historical snapshot
+
+Accepted. A 5,000-row target-role CSV subset derived from the publicly linked Jobstreet Indonesia Dataset is stored as the active external snapshot. Its Kaggle listing reports CC0; the source schema and retrieval date were recorded before use. The full download is not versioned because of size, while the retained subset is normalized, has public URL query parameters removed, and is clearly disclosed as historical—not live or representative of the full market.

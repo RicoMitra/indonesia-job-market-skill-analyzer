@@ -53,6 +53,30 @@ def test_loader_falls_back_to_bundled_sample_when_external_folder_is_empty(tmp_p
     assert sources == ["sample_jobs"]
 
 
+def test_normalize_external_csv_supports_jobstreet_camel_case_headers():
+    from src.load_data import normalize_external_csv
+
+    result = normalize_external_csv(
+        pd.DataFrame(
+            [
+                {
+                    "jobTitle": "Data Analyst",
+                    "companyName": "Example Co",
+                    "locations": "Jakarta",
+                    "description": "Use SQL and Python.",
+                    "postedAt": "2021-12-12T17:00:00Z",
+                    "jobUrl": "https://example.test/jobs/1",
+                }
+            ]
+        )
+    )
+
+    assert result.loc[0, "company"] == "Example Co"
+    assert result.loc[0, "location"] == "Jakarta"
+    assert result.loc[0, "posted_at"] == "2021-12-12T17:00:00Z"
+    assert result.loc[0, "source_url"] == "https://example.test/jobs/1"
+
+
 def test_export_static_reports_external_snapshot_metadata(tmp_path):
     from export_static import export_static
 
@@ -66,6 +90,7 @@ def test_export_static_reports_external_snapshot_metadata(tmp_path):
                 "location": "Bandung",
                 "description": "Use Python, SQL, and machine learning.",
                 "source": "manual public snapshot",
+                "scraped_at": "2026-07-19T00:00:00Z",
             },
             {
                 "title": "Data Scientist",
@@ -90,7 +115,9 @@ def test_export_static_reports_external_snapshot_metadata(tmp_path):
     metadata = json.loads((tmp_path / "outputs" / "metadata.json").read_text(encoding="utf-8"))
     overview = json.loads((tmp_path / "outputs" / "overview.json").read_text(encoding="utf-8"))
     assert metadata["row_count"] == 1
+    assert metadata["source_name"] == "manual public snapshot"
     assert metadata["source_datasets"] == ["verified_snapshot"]
     assert metadata["status"] == "snapshot dataset, not real-time"
+    assert metadata["retrieval_date"] == "2026-07-19T00:00:00Z"
     assert metadata["license"] == "Verify the license and source terms for each manually supplied external snapshot."
-    assert overview["source"]["name"] == "verified_snapshot"
+    assert overview["source"]["name"] == "manual public snapshot"

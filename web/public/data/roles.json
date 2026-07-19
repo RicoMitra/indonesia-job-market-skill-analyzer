@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-07-19T08:07:03Z",
+  "generated_at": "2026-07-19T08:14:56Z",
   "roles": [
     {
-      "role": "Data Analyst",
-      "posting_count": 3
-    },
-    {
-      "role": "AI Engineer",
-      "posting_count": 2
+      "role": "Software Engineer",
+      "posting_count": 1286
     },
     {
       "role": "Business Analyst",
-      "posting_count": 2
+      "posting_count": 328
+    },
+    {
+      "role": "Data Analyst",
+      "posting_count": 283
     },
     {
       "role": "Data Scientist",
-      "posting_count": 2
+      "posting_count": 86
     },
     {
       "role": "ML Engineer",
-      "posting_count": 2
+      "posting_count": 8
     },
     {
-      "role": "Software Engineer",
-      "posting_count": 2
+      "role": "AI Engineer",
+      "posting_count": 3
     }
   ]
 }

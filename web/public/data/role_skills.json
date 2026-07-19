@@ -1,177 +1,107 @@
 {
-  "generated_at": "2026-07-19T08:07:03Z",
+  "generated_at": "2026-07-19T08:14:56Z",
   "roles": {
-    "Data Analyst": [
+    "Software Engineer": [
       {
-        "skill": "Communication",
-        "posting_count": 3
+        "skill": "JavaScript",
+        "posting_count": 62
       },
       {
-        "skill": "Excel",
-        "posting_count": 3
-      },
-      {
-        "skill": "Power BI",
-        "posting_count": 3
+        "skill": "React",
+        "posting_count": 51
       },
       {
         "skill": "SQL",
-        "posting_count": 3
+        "posting_count": 49
+      },
+      {
+        "skill": "Java",
+        "posting_count": 37
+      },
+      {
+        "skill": "TypeScript",
+        "posting_count": 14
+      },
+      {
+        "skill": "Git",
+        "posting_count": 7
+      },
+      {
+        "skill": "Communication",
+        "posting_count": 6
       },
       {
         "skill": "Python",
+        "posting_count": 6
+      },
+      {
+        "skill": "Docker",
+        "posting_count": 3
+      },
+      {
+        "skill": "AWS",
         "posting_count": 2
+      },
+      {
+        "skill": "FastAPI",
+        "posting_count": 2
+      },
+      {
+        "skill": "Kubernetes",
+        "posting_count": 1
+      }
+    ],
+    "Business Analyst": [
+      {
+        "skill": "Communication",
+        "posting_count": 10
+      },
+      {
+        "skill": "Excel",
+        "posting_count": 2
+      },
+      {
+        "skill": "Power BI",
+        "posting_count": 1
+      },
+      {
+        "skill": "SQL",
+        "posting_count": 1
       },
       {
         "skill": "Tableau",
         "posting_count": 1
       }
     ],
-    "AI Engineer": [
+    "Data Analyst": [
       {
-        "skill": "Docker",
-        "posting_count": 2
-      },
-      {
-        "skill": "FastAPI",
-        "posting_count": 2
-      },
-      {
-        "skill": "LLMs",
-        "posting_count": 2
-      },
-      {
-        "skill": "Python",
-        "posting_count": 2
-      },
-      {
-        "skill": "AWS",
-        "posting_count": 1
+        "skill": "Excel",
+        "posting_count": 12
       },
       {
         "skill": "Communication",
-        "posting_count": 1
-      },
-      {
-        "skill": "GCP",
-        "posting_count": 1
-      },
-      {
-        "skill": "TensorFlow",
-        "posting_count": 1
-      }
-    ],
-    "Business Analyst": [
-      {
-        "skill": "Excel",
-        "posting_count": 2
+        "posting_count": 6
       },
       {
         "skill": "SQL",
+        "posting_count": 6
+      },
+      {
+        "skill": "Tableau",
         "posting_count": 2
-      },
-      {
-        "skill": "Communication",
-        "posting_count": 1
-      },
-      {
-        "skill": "Power BI",
-        "posting_count": 1
       }
     ],
     "Data Scientist": [
       {
-        "skill": "Pandas",
-        "posting_count": 2
-      },
-      {
         "skill": "Python",
-        "posting_count": 2
-      },
-      {
-        "skill": "SQL",
-        "posting_count": 2
-      },
-      {
-        "skill": "GCP",
-        "posting_count": 1
-      },
-      {
-        "skill": "PyTorch",
-        "posting_count": 1
-      },
-      {
-        "skill": "scikit-learn",
-        "posting_count": 1
-      }
-    ],
-    "ML Engineer": [
-      {
-        "skill": "Docker",
-        "posting_count": 2
-      },
-      {
-        "skill": "Git",
-        "posting_count": 2
-      },
-      {
-        "skill": "Kubernetes",
-        "posting_count": 2
-      },
-      {
-        "skill": "Python",
-        "posting_count": 2
-      },
-      {
-        "skill": "AWS",
-        "posting_count": 1
-      },
-      {
-        "skill": "Azure",
-        "posting_count": 1
-      },
-      {
-        "skill": "TensorFlow",
-        "posting_count": 1
-      },
-      {
-        "skill": "scikit-learn",
-        "posting_count": 1
-      }
-    ],
-    "Software Engineer": [
-      {
-        "skill": "AWS",
-        "posting_count": 2
-      },
-      {
-        "skill": "Git",
-        "posting_count": 2
-      },
-      {
-        "skill": "Docker",
-        "posting_count": 1
-      },
-      {
-        "skill": "FastAPI",
-        "posting_count": 1
-      },
-      {
-        "skill": "Python",
-        "posting_count": 1
-      },
-      {
-        "skill": "React",
         "posting_count": 1
       },
       {
         "skill": "SQL",
         "posting_count": 1
-      },
-      {
-        "skill": "TypeScript",
-        "posting_count": 1
       }
-    ]
+    ],
+    "ML Engineer": [],
+    "AI Engineer": []
   }
 }
