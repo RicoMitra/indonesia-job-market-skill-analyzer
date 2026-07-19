@@ -29,3 +29,7 @@ The web UI may render these artifacts and compare exact entered labels to precom
 ## D-007: Next.js frontend deployed from `web/`
 
 Accepted. The portfolio-facing dashboard uses Next.js, Tailwind CSS, and Recharts in `web/` and is deployed to Vercel with that directory as its root. The Streamlit application remains a local reference only.
+
+## D-008: Manual external snapshot ingestion
+
+Accepted. CSV files placed in `pipeline/data/raw/external/` are the primary analytical input when present; the original sample is a deterministic fallback only. The pipeline supports documented column aliases, fills missing optional values, and removes exact posting fingerprints before analysis. Each refresh exposes source filenames, deduplicated row count, refresh date, and a non-real-time snapshot status. This preserves offline, no-credential reproducibility and avoids automated portal scraping.

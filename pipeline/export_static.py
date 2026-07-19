@@ -27,11 +27,19 @@ def write_json(directory: Path, name: str, payload: dict[str, object]) -> None:
     (directory / name).write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
 
-def export_static(input_path: Path, processed_dir: Path, output_dir: Path, public_dir: Path, source: str = "sample") -> dict[str, object]:
+def export_static(
+    input_path: Path,
+    processed_dir: Path,
+    output_dir: Path,
+    public_dir: Path,
+    source: str = "sample",
+    external_dir: Path = Path("pipeline/data/raw/external"),
+) -> dict[str, object]:
     """Run the pipeline, then expose read-only dashboard summaries as JSON files."""
-    run(input_path, processed_dir, source=source)
+    pipeline_result = run(input_path, processed_dir, source=source, external_dir=external_dir)
     database = processed_dir / "job_market.db"
     generated_at = datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    is_external_snapshot = pipeline_result["source_datasets"] != [input_path.stem]
     roles = role_summary(database)
     all_skills = role_skill_summary(database).head(12)
     evidence = query(
@@ -53,10 +61,15 @@ def export_static(input_path: Path, processed_dir: Path, output_dir: Path, publi
     }
     metadata = {
         "generated_at": generated_at,
-        "source": "Bundled illustrative public sample",
-        "license": "Original demo fixture; replace through the documented local CSV refresh workflow.",
+        "source": " + ".join(pipeline_result["source_datasets"]),
+        "source_datasets": pipeline_result["source_datasets"],
+        "license": "Verify the license and source terms for each manually supplied external snapshot."
+        if is_external_snapshot
+        else "Original demo fixture; replace through the documented local CSV refresh workflow.",
         "row_count": int(query(database, "select count(*) as count from jobs").iloc[0]["count"]),
+        "refresh_date": generated_at,
         "retrieval_date": None,
+        "status": "snapshot dataset, not real-time",
         "limitations": "Static educational sample. No live scraping, paid API, or career advice.",
     }
     cluster_rows = query(
@@ -92,9 +105,9 @@ def export_static(input_path: Path, processed_dir: Path, output_dir: Path, publi
     overview = {
         "generated_at": generated_at,
         "source": {
-            "name": "Bundled illustrative public sample",
-            "type": "Original demo fixture",
-            "disclosure": "This is a reproducible educational snapshot, not live job-market intelligence.",
+            "name": " + ".join(pipeline_result["source_datasets"]),
+            "type": "External local snapshot" if is_external_snapshot else "Original demo fixture",
+            "disclosure": "This is a reproducible snapshot dataset, not a real-time job-market feed.",
         },
         "kpis": {
             "matched_postings": int(query(database, "select count(*) as count from jobs").iloc[0]["count"]),
@@ -129,5 +142,6 @@ if __name__ == "__main__":
     parser.add_argument("--output", type=Path, default=Path("pipeline/outputs"))
     parser.add_argument("--public", type=Path, default=Path("web/public/data"))
     parser.add_argument("--source", default="sample")
+    parser.add_argument("--external", type=Path, default=Path("pipeline/data/raw/external"))
     args = parser.parse_args()
-    print(export_static(args.input, args.processed, args.output, args.public, args.source)["kpis"])
+    print(export_static(args.input, args.processed, args.output, args.public, args.source, args.external)["kpis"])

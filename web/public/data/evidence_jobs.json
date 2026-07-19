@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T07:45:24Z",
+  "generated_at": "2026-07-19T08:07:03Z",
   "jobs": [
     {
       "job_id": "a24c9f8c6b275258",
@@ -7,7 +7,7 @@
       "company": "Coastline Finance",
       "location": "Remote",
       "posted_at": "2026-02-14",
-      "source": "sample",
+      "source": "unknown",
       "scraped_at": "",
       "roles": "Data Analyst",
       "skills_detected": "Communication,Excel,Power BI,Python,SQL,Tableau"
@@ -18,7 +18,7 @@
       "company": "Terra Mobility",
       "location": "Jakarta",
       "posted_at": "2026-02-12",
-      "source": "sample",
+      "source": "unknown",
       "scraped_at": "",
       "roles": "Software Engineer",
       "skills_detected": "AWS,Git,React,TypeScript"
@@ -29,7 +29,7 @@
       "company": "Indigo Research",
       "location": "Jakarta",
       "posted_at": "2026-02-10",
-      "source": "sample",
+      "source": "unknown",
       "scraped_at": "",
       "roles": "AI Engineer",
       "skills_detected": "Docker,FastAPI,GCP,LLMs,Python,TensorFlow"
@@ -40,7 +40,7 @@
       "company": "Helio Health",
       "location": "Bandung",
       "posted_at": "2026-02-07",
-      "source": "sample",
+      "source": "unknown",
       "scraped_at": "",
       "roles": "ML Engineer",
       "skills_detected": "Azure,Docker,Git,Kubernetes,Python,scikit-learn"
@@ -51,7 +51,7 @@
       "company": "Insight Foundry",
       "location": "Yogyakarta",
       "posted_at": "2026-02-03",
-      "source": "sample",
+      "source": "unknown",
       "scraped_at": "",
       "roles": "Data Scientist",
       "skills_detected": "GCP,Pandas,PyTorch,Python,SQL"
@@ -62,7 +62,7 @@
       "company": "Atlas Commerce",
       "location": "Jakarta",
       "posted_at": "2026-02-01",
-      "source": "sample",
+      "source": "unknown",
       "scraped_at": "",
       "roles": "Business Analyst,Data Analyst",
       "skills_detected": "Communication,Excel,Power BI,SQL"
@@ -73,7 +73,7 @@
       "company": "Pacific Stack",
       "location": "Surabaya",
       "posted_at": "2026-01-25",
-      "source": "sample",
+      "source": "unknown",
       "scraped_at": "",
       "roles": "Software Engineer",
       "skills_detected": "AWS,Docker,FastAPI,Git,Python,SQL"
@@ -84,7 +84,7 @@
       "company": "Signalworks",
       "location": "Remote",
       "posted_at": "2026-01-21",
-      "source": "sample",
+      "source": "unknown",
       "scraped_at": "",
       "roles": "AI Engineer",
       "skills_detected": "AWS,Communication,Docker,FastAPI,LLMs,Python"
@@ -95,7 +95,7 @@
       "company": "Orbit Compute",
       "location": "Jakarta",
       "posted_at": "2026-01-20",
-      "source": "sample",
+      "source": "unknown",
       "scraped_at": "",
       "roles": "ML Engineer",
       "skills_detected": "AWS,Docker,Git,Kubernetes,Python,TensorFlow"
@@ -106,7 +106,7 @@
       "company": "Meridian Labs",
       "location": "Bandung",
       "posted_at": "2026-01-18",
-      "source": "sample",
+      "source": "unknown",
       "scraped_at": "",
       "roles": "Data Scientist",
       "skills_detected": "Pandas,Python,SQL,scikit-learn"
@@ -117,7 +117,7 @@
       "company": "Garuda Systems",
       "location": "Jakarta",
       "posted_at": "2026-01-15",
-      "source": "sample",
+      "source": "unknown",
       "scraped_at": "",
       "roles": "Business Analyst",
       "skills_detected": "Excel,SQL"
@@ -128,7 +128,7 @@
       "company": "Nusantara Data",
       "location": "Jakarta",
       "posted_at": "2026-01-12",
-      "source": "sample",
+      "source": "unknown",
       "scraped_at": "",
       "roles": "Data Analyst",
       "skills_detected": "Communication,Excel,Power BI,Python,SQL"

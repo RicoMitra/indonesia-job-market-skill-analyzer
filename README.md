@@ -8,13 +8,15 @@ The Python pipeline is the source of truth. It cleans CSV data, marks duplicates
 
 ## Refreshing static evidence
 
-Place a CSV with `title`, `description`, `company`, `location`, and optional `posted_at` fields in `pipeline/data/raw/`, then run:
+To use a free, manually downloaded public snapshot, place one or more CSV files in `pipeline/data/raw/external/`, then run:
 
 ```powershell
-python pipeline/export_static.py --input pipeline/data/raw/sample_jobs.csv --public web/public/data
+python pipeline/export_static.py --external pipeline/data/raw/external --public web/public/data
 ```
 
-The command regenerates `metadata.json`, `overview.json`, `roles.json`, `role_skills.json`, `skill_matrix.json`, `clusters.json`, and `evidence_jobs.json`. The repository bundles only its original demo fixture. Any external dataset must have its license, fields, and redistribution terms verified before it is committed; otherwise use this local refresh path.
+The pipeline automatically uses the external CSV files as its primary snapshot when that folder is non-empty. If it is empty, it falls back to the bundled 12-row demo fixture. It accepts common aliases such as `job_title`, `company_name`, `job_location`, `job_description`, `posting_date`, and `job_url`, then normalizes them to `title`, `company`, `location`, `description`, `posted_at`, `source`, `source_url`, and `scraped_at`. Missing fields become empty values (`source` becomes `unknown`) rather than stopping the run. Duplicate postings are removed using `title + company + location + description`.
+
+Download a CSV manually from a source whose license, schema, and source terms you have verified. Do not automate scraping of LinkedIn, Jobstreet, Glints, or Kalibrr. The command regenerates the JSON artifacts and `metadata.json` records source filenames, actual post-deduplication row count, refresh timestamp, and `snapshot dataset, not real-time` status. The committed demo remains intentionally small until a verified external snapshot is supplied.
 
 ## What the snapshot can show
 
@@ -98,7 +100,7 @@ The candidate larger Indonesian source is the [Jobstreet Indonesia Dataset on Ka
 
 Deploy `web/` to Vercel with **Root Directory** set to `web`. Commit the generated JSON in `pipeline/outputs/` and `web/public/data/` so Vercel can build the static presentation layer without a Python runtime.
 
-Demo: [WorkSignal on Vercel](https://worksignal-indonesia-job-market-jtwzxf4pe-dan1el.vercel.app)
+Demo: [WorkSignal on Vercel](https://worksignal-indonesia-job-market-okp8xabox-dan1el.vercel.app)
 
 ## Project records
 

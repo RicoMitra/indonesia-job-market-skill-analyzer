@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-19T07:45:24Z",
+  "generated_at": "2026-07-19T08:07:03Z",
   "source": {
-    "name": "Bundled illustrative public sample",
+    "name": "sample_jobs",
     "type": "Original demo fixture",
-    "disclosure": "This is a reproducible educational snapshot, not live job-market intelligence."
+    "disclosure": "This is a reproducible snapshot dataset, not a real-time job-market feed."
   },
   "kpis": {
     "matched_postings": 12,

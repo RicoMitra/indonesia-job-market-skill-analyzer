@@ -1,8 +1,13 @@
 {
-  "generated_at": "2026-07-19T07:45:24Z",
-  "source": "Bundled illustrative public sample",
+  "generated_at": "2026-07-19T08:07:03Z",
+  "source": "sample_jobs",
+  "source_datasets": [
+    "sample_jobs"
+  ],
   "license": "Original demo fixture; replace through the documented local CSV refresh workflow.",
   "row_count": 12,
+  "refresh_date": "2026-07-19T08:07:03Z",
   "retrieval_date": null,
+  "status": "snapshot dataset, not real-time",
   "limitations": "Static educational sample. No live scraping, paid API, or career advice."
 }
